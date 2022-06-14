@@ -1,25 +1,9 @@
 import requests, sys, getopt
 from bs4 import BeautifulSoup
+from helpers import *
 
 website = None;
 element = None;
-help = """
-📜 Web Scrapper Help :
-===================
-
-Flags :
--------
-
--h | --help       Help  
--w | --website    Website url without protocol
--e | --element    Element to be recovered
-"""
-warning = """
-⚠️  Warning
-==========
-
-This website doesn\'t exist !
-"""
 
 try:
     opts, args = getopt.getopt(
